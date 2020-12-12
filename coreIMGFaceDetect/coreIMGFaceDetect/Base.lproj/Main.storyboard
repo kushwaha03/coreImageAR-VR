@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="coreIMGFaceDetect" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IMG_20200616_172351098" translatesAutoresizingMaskIntoConstraints="NO" id="wlS-fD-DIZ">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cvG-6y-Tfl">
+                                <rect key="frame" x="195" y="815" width="219" height="47"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="47" id="fmf-Rt-jIt"/>
+                                    <constraint firstAttribute="width" constant="219" id="ilR-l2-mUi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Detect"/>
+                                <connections>
+                                    <action selector="detect:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KdJ-Ws-Jf7"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="wlS-fD-DIZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="0jq-pj-JzJ"/>
+                            <constraint firstItem="cvG-6y-Tfl" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="3dj-N2-fKK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="wlS-fD-DIZ" secondAttribute="bottom" id="Jux-e3-Zx9"/>
+                            <constraint firstItem="cvG-6y-Tfl" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="TYE-B2-YEc"/>
+                            <constraint firstItem="wlS-fD-DIZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Wak-7g-Ed2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wlS-fD-DIZ" secondAttribute="trailing" id="iDH-1H-cVr"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="wlS-fD-DIZ" id="eb1-Vw-gRZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="79.6875"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="IMG_20200616_172351098" width="558" height="744"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
